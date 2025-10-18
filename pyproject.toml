@@ -1,0 +1,18 @@
+[project]
+name = "frostlink"
+version = "0.1.0"
+description = "A simple Snowflake connector for Pandas and PySpark"
+authors = [
+    { name="Mayank Kakkar" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "snowflake-connector-python",
+    "pandas",
+    "pyspark"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
