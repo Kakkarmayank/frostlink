@@ -20,4 +20,4 @@ Frostlink is a lightweight Python package that connects securely to **Snowflake*
 - ⚡ Works with Pandas, SQL, and Spark  
 - 🧩 Ideal for teams & automation pipelines  
 
-**Author:** Mayank Kakkar • Building smarter data bridges for Snowflake ❄️
+**Author:** Mayank Kakkar • 
