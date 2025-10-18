@@ -10,7 +10,7 @@
 # #     print("Let's configure your Snowflake connection. This will only happen once.\n")
 
 # #     user = input("👉 Snowflake user (email): ").strip()
-# #     account = input("👉 Snowflake account (e.g. ZSYFWFE-UDP): ").strip()
+# #     account = input("👉 Snowflake account (e.g. ***): ").strip()
 # #     warehouse = input("👉 Default warehouse (e.g. TEST_WH): ").strip()
 # #     database = input("👉 Default database (e.g. RAW): ").strip()
 # #     schema = input("👉 Default schema (e.g. SAP_ECC_APAC_AP1): ").strip()
@@ -276,7 +276,7 @@ def _interactive_setup_ui():
         col1, col2 = st.columns(2)
         with col1:
             user = st.text_input("Snowflake User (email)", value="", placeholder="you@company.com")
-            account = st.text_input("Account Identifier", value="", placeholder="e.g. ZSYFWFE-UDP")
+            account = st.text_input("Account Identifier", value="", placeholder="e.g. Z***")
             warehouse = st.text_input("Default Warehouse", value="", placeholder="e.g. TEST_WH")
         with col2:
             database = st.text_input("Default Database", value="", placeholder="e.g. RAW")
