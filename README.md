@@ -1,45 +1,23 @@
 # ❄️ Frostlink – Python ↔ Snowflake Connector  
-Frostlink is a lightweight Python package that connects seamlessly to **Snowflake** using secure **SSO** and an interactive **Streamlit setup UI**. It fetches data into **Pandas**, **SQL**, or **PySpark** in seconds — no credentials hardcoding, no DBT required.  
-### 🚀 Quick Start  
-```bash
-git clone https://github.com/Kakkarmayank/frostlink.git
-cd frostlink
-pip install -e .
-python -m frostlink.config
-Enter Snowflake details (user, account, warehouse, db, schema) → auto-saved at ~/.sf/snowflake_config.json
+Frostlink is a lightweight Python package that connects securely to **Snowflake** using **SSO** and an interactive **Streamlit UI**. Fetch Snowflake data directly into **Pandas** or **PySpark** — no manual setup, no credentials in code.  
 
-🐼 Pandas Example
-python
-Copy code
-from frostlink import read_sql
-df = read_sql("SELECT * FROM RAW.SAP_ECC_APAC_AP1.A017 LIMIT 5")
-print(df)
-🔥 PySpark Example
-python
-Copy code
-from frostlink import read_spark
-df = read_spark("SELECT * FROM RAW.SAP_ECC_APAC_AP1.A017 LIMIT 5")
-df.show()
-💡 Highlights
-✅ One-time Streamlit setup • ✅ Secure SSO login • ✅ Works with Pandas & Spark • ✅ Team-ready package • ✅ No DBT required
+**Install & Setup (one time):**  
+`git clone https://github.com/Kakkarmayank/frostlink.git && cd frostlink && pip install -e . && python -m frostlink.config`  
 
-📁 Structure
-frostlink/ → __init__.py · config.py · pandas_io.py · spark_io.py · sql_io.py · pyproject.toml
+**Example (Pandas):**  
+`from frostlink import read_sql`  
+`df = read_sql("SELECT * FROM RAW.SAP_ECC_APAC_AP1.A017 LIMIT 5")`  
+`print(df)`  
 
-🧊 Author
-Mayank Kakkar — Building smarter data bridges for Snowflake ❄️
+**Example (PySpark):**  
+`from frostlink import read_spark`  
+`df = read_spark("SELECT * FROM RAW.SAP_ECC_APAC_AP1.A017 LIMIT 5")`  
+`df.show()`  
 
-yaml
-Copy code
+**Highlights:**  
+- 🧭 Streamlit setup — auto-creates `~/.sf/snowflake_config.json`  
+- 🔐 Secure browser-based SSO login  
+- ⚡ Works with Pandas, SQL, and Spark  
+- 🧩 Ideal for teams & automation pipelines  
 
----
-
-You can literally copy-paste that into your `README.md` — everything fits in **one screen / one cell**, ready for GitHub display.  
-
-Would you like the same single-cell version rewritten for your **`snowfetch`** package name next?
-
-
-
-
-
-
+**Author:** Mayank Kakkar • Building smarter data bridges for Snowflake ❄️
